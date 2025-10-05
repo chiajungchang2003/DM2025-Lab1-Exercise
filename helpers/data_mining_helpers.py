@@ -6,6 +6,14 @@ Author: Elvis Saravia
 Email: ellfae@gmail.com
 """
 
+def simplify(new_df,nessary_column):
+    X = new_df[nessary_column].copy
+    return X
+    
+def add_mapping(X,mapping,target,source):
+    X[target] = X[source].map(mapping)
+    
+
 def format_rows(docs):
     """ format the text field and strip special characters """
     D = []
